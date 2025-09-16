@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garbage Classification</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Garbage Classification</h1>
+            <p>Upload an image to predict: metal, organic, or plastic.</p>
+        </header>
+
+        <section class="uploader">
+            <form id="upload-form">
+                <label class="file-input" for="image">Choose image</label>
+                <input type="file" id="image" name="image" accept="image/*" />
+                <button type="submit" id="predict-btn">Predict</button>
+            </form>
+            <div id="preview" class="preview hidden">
+                <img id="preview-img" alt="Preview" />
+            </div>
+        </section>
+
+        <section id="results" class="results hidden">
+            <div class="card">
+                <h2 id="predicted-class"></h2>
+                <p id="confidence"></p>
+                <div id="probabilities"></div>
+            </div>
+        </section>
+
+        <section id="error" class="error hidden"></section>
+
+        <footer>
+            <small>Model: PyTorch CNN • Endpoint: /predict</small>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+    
+</body>
+</html>
+
+
