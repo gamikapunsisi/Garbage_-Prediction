@@ -51,5 +51,9 @@ def predict():
     
     return jsonify({'error': 'File type not allowed'}), 400
 
+# ✅ IMPORTANT for CPanel / Passenger
+# CPanel will use this object to start your app
+application = app
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
