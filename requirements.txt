@@ -9,3 +9,4 @@ flask-cors
 torch
 torchvision
 torchaudio
+Werkzeug

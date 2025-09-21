@@ -51,7 +51,8 @@ def predict():
     
     return jsonify({'error': 'File type not allowed'}), 400
 
-# ✅ IMPORTANT for CPanel / Passenger
+
+ # ✅ IMPORTANT for CPanel / Passenger
 # CPanel will use this object to start your app
 application = app
 
